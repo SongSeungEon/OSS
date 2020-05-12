@@ -28,31 +28,42 @@ void print_all_records(Record records[]){
 // 구조체 Record 변수 records 에 입력을 해주는 함수
 void add_a_record(Record records[]){
   char dummy;
-  printf("What is Student number? : ");
-  scanf("%d",&records[count].id);
-  scanf("%c",&dummy);
-  printf("What is name? :");
-  fgets(records[count].name,30,stdin);
-  records[count].name[strlen(records[count].name)-1]='\0';
-  printf("The list of major\n\n");
-  printf("-Global Leadership School\n");
-  printf("-International Studies, Languages and Literature\n");
-  printf("-Management and Economics\n");
-  printf("-Law\n");
-  printf("-Counseling Psychology and Social Welfare\n");
-  printf("-Communication Arts and Science\n");
-  printf("-Spatial Environment System Engineering\n");
-  printf("-Mechanical and Control Engineering\n");
-  printf("-Contents Convergence Design\n");
-  printf("-Life Science\n");
-  printf("-Computer Science and Electrical Engineering\n");
-  printf("-Global Entrepreneurship and information, Communication Technology\n");
-  printf("-Creative Convergence Education\n");
-  printf("\"You can input word that only you can understand.\"\n");
-  printf("ex) CSEE, GLS\n");
-  printf("\nWhat is major? :");
-  fgets(records[count].major,100,stdin);
-  records[count].major[strlen(records[count].major)-1]='\0';
+  while(1){
+  	printf("What is Student number? : ");
+  	scanf("%d",&records[count].id);
+  	scanf("%c",&dummy);
+  	printf("What is name? :");
+  	fgets(records[count].name,30,stdin);
+  	records[count].name[strlen(records[count].name)-1]='\0';
+  	printf("The list of major\n\n");
+  	printf("-Global Leadership School\n");
+  	printf("-International Studies, Languages and Literature\n");
+  	printf("-Management and Economics\n");
+  	printf("-Law\n");
+  	printf("-Counseling Psychology and Social Welfare\n");
+ 	printf("-Communication Arts and Science\n");
+  	printf("-Spatial Environment System Engineering\n");
+  	printf("-Mechanical and Control Engineering\n");
+  	printf("-Contents Convergence Design\n");
+  	printf("-Life Science\n");
+  	printf("-Computer Science and Electrical Engineering\n");
+  	printf("-Global Entrepreneurship and information, Communication Technology\n");
+  	printf("-Creative Convergence Education\n");
+  	printf("\"You can input word that only you can understand.\"\n");
+  	printf("ex) CSEE, GLS\n");
+  	printf("\nWhat is major? :");
+  	fgets(records[count].major,100,stdin);
+  	records[count].major[strlen(records[count].major)-1]='\0';
+  	
+	//modified by gihoon
+	printf("the new record info:\n");
+	printf("id: %d\nname: %s\nmajor: %s\n", records[count].id , records[count].name , records[count].major);
+
+	int temp;
+	printf("r u sure? 1 (yes) Otherwise (redo):");
+	scanf("%d",&temp);
+	if(temp == 1)break;
+  }
   count++;
 }
 
