@@ -8,5 +8,6 @@ void rearrange(Record[]);
 void find_student_num(Record[]);
 void find_student_major(Record[]);
 void make_groups(Record[]);
-
+//GH modifed
+void Advanced_Search(Record[]);
 #endif

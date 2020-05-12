@@ -137,5 +137,27 @@ void make_groups(Record records[]){
   printf("------------------------------\n\n");
 }
 
+void Advanced_Search(Record records[]){
+
+	printf("Advanced_Search\n");
+	int count = return_count();
+	
+	
+	char condition_name[20];
+	printf("put the name condition 0(doesn't care) or student name: ");
+  	fgets(condition_name,20,stdin);
+  	condition_name[strlen(condition_name)-1]='\0';
+	
+	char major_condition[100];	
+	printf("put the major condition 0(doesn't care) or student name: ");
+  	fgets(major_condition,100,stdin);
+  	major_condition[strlen(major_condition)-1]='\0';
+	
+	for(int i = 0 ; i < count ; i++){
+		if(((strcmp(records[i].major, major_condition)==0) || (strcmp(major_condition,"0")==0)) && ((strcmp(records[i].name,condition_name)==0) || (strcmp(condition_name,"0")==0)))		printf("%d\t\t%s\t\t%s\n",records[i].id,records[i].name,records[i].major);
+	}
+}
+
+
 
 // TODO: Add more functions to fulfill the optional requirements
