@@ -6,6 +6,7 @@
 #include "extras.h"
 
 
+//2020 05 13 modified 
 
 // Function: rearrange()
 // Input: record - array of Records; this may contain empty elements in the middle

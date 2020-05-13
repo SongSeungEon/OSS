@@ -3,6 +3,8 @@
 
 #include "record.h"
 
+
+//2020 0513 modified 
 // function prototypes
 void rearrange(Record[]);
 void find_student_num(Record[]);

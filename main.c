@@ -5,7 +5,7 @@
 #include "record.h"
 
 #define MAX_RECORDS 1000
-
+// 2020 0513 modified
 // function prototypes
 void input_handler(char[], Record[]);
 void display_menu();
